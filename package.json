@@ -1,0 +1,9 @@
+{
+  "name": "Game",
+  "description": "Real-time multiplayer game",
+  "version": "0.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
