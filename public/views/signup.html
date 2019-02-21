@@ -1,0 +1,22 @@
+
+
+	<div id="signup-form" class="row">
+		<div class="col-sm-8 col-sm-offset-2 text-center">
+			<h1>Rejestracja</h1>
+			<form>
+				<div class="form-group">
+					<input type="text" class="form-control input-lg text-center" placeholder="Nickname" ng-model="user.nickname" ng-blur="checkNicknameSignup()">
+					<p>{{errors_signup.nickname}}</p>
+					<input type="text" class="form-control input-lg text-center" placeholder="Email" ng-model="user.email" ng-blur="checkEmailSignup()">
+					<p>{{errors_signup.email}}</p>
+					<input type="text" class="form-control input-lg text-center" placeholder="Hasło" ng-model="user.password" ng-blur="checkPasswordSignup(1)">
+					<p>{{errors_signup.password}}</p>
+					<input type="text" class="form-control input-lg text-center" placeholder="Powtórz hasło" ng-model="user.password2" ng-blur="checkPasswordSignup(2)">
+					<p>{{errors_signup.password2}}</p>
+				</div>
+				<p>{{errors_signup.auth}}</p>
+				<button type="submit" class="btn btn-primary btn" ng-click="createUser()" ng-disabled="inactiveButton">Zarejestruj</button>
+			</form>
+		</div>
+		<p>Masz konto ? <a href="#/login"> <span class="glyphicon glyphicon-log-in"></span> Logowanie</a></p>
+	</div>

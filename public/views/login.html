@@ -1,0 +1,17 @@
+	
+	<div id="login-form" class="row">
+		<div class="col-sm-8 col-sm-offset-2 text-center">
+			<h1>Logowanie</h1>
+			<form>
+				<div class="form-group">
+					<input type="text" class="form-control input-lg text-center" placeholder="Email" ng-model="user.email" ng-blur="checkEmailLogin()">
+					<p>{{errors_login.email}}</p>
+					<input type="text" class="form-control input-lg text-center" placeholder="Password" ng-model="user.password" ng-blur="checkPasswordLogin()">
+					<p>{{errors_login.password}}</p>
+				</div>
+				{{errors_login.auth}}
+				<button type="submit" class="btn btn-primary btn" ng-click="loginUser()" ng-disabled="inactiveButton">Zaloguj</button>
+			</form>
+		</div>
+		<p>Potrzebujesz konta ? <a href="#/signup"><span class="glyphicon glyphicon-user"></span> Rejestracja</a></p>
+	</div>
