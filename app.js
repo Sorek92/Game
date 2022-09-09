@@ -23,7 +23,7 @@ var flash = require('connect-flash');
 var configDB = require('./config/database.js');
 
 // Connect to database
-mongoose.connect(configDB.url);
+mongoose.connect(configDB.url, , {useNewUrlParser: true, useUnifiedTopology: true});
 
 // Send to configure
 require('./config/passport')(passport);
